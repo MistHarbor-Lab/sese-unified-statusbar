@@ -1,0 +1,36 @@
+[
+    {
+        "id": "a7362cbf-8e73-4a19-8b3f-0b7fa602e63d",
+        "scriptName": "【技能发动】技能发动标签美化正则1",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/(?:【|\\[)技能发动[：:]\\s*([^\\]】\\n]+?)\\s*(?:】|\\])/g",
+        "trimStrings": [],
+        "replaceString": "<span class=\"ub-skill-trigger ub-skill-card\" data-skill=\"$1\" data-ub-card=\"1\" data-kind=\"fire\" style=\"display:inline-block;vertical-align:baseline;margin:2px 4px;border-radius:13px;border:1px solid var(--ub-skill-bdd-$1,rgba(255,255,255,.14));background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.015));box-shadow:0 0 14px var(--ub-skill-gl-$1,transparent),inset 0 1px 0 rgba(255,255,255,.06)\"><span class=\"ub-skill-hd\" data-ub-hd=\"1\" style=\"display:inline-flex;align-items:center;gap:7px;padding:2px 11px 2px 3px;cursor:pointer;user-select:none;-webkit-user-select:none;border-radius:999px\"><i style=\"display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:8px;font-style:normal;background:linear-gradient(135deg,var(--ub-skill-ic-$1,rgba(255,255,255,.08)),rgba(255,255,255,.03));border:1px solid var(--ub-skill-bd-$1,rgba(255,255,255,.28));color:var(--ub-skill-c-$1,#d8dce6);box-shadow:0 0 8px var(--ub-skill-gl-$1,transparent)\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\" fill=\"currentColor\"/></svg></i><span style=\"font-size:.82em;color:#9ba2b2;letter-spacing:1px\">技能发动</span><b style=\"color:var(--ub-skill-c-$1,#d8dce6);text-shadow:0 0 8px var(--ub-skill-gl-$1,transparent)\">$1</b><i data-ub-chev=\"1\" style=\"font-style:normal;color:var(--ub-skill-c-$1,#d8dce6);opacity:.55;font-size:.78em;transition:transform .2s\">▼</i></span><span class=\"ub-skill-bd\" data-ub-bd=\"1\" style=\"display:none;padding:9px 13px 11px;border-top:1px solid var(--ub-skill-bdd-$1,rgba(255,255,255,.14));margin-top:3px\"><span data-ub-type=\"1\" style=\"display:none;font-size:.76em;padding:0 9px;border-radius:999px;border:1px solid var(--ub-skill-bd-$1,rgba(255,255,255,.28));color:var(--ub-skill-c-$1,#d8dce6);background:var(--ub-skill-ic-$1,rgba(255,255,255,.08));letter-spacing:1px\"></span><span style=\"font-size:.76em;color:#828896;margin-left:8px\">技能效果</span><span class=\"ub-skill-eff\" data-ub-eff=\"1\" style=\"display:block;margin-top:7px;color:#c6cbd7;line-height:1.75;padding-left:11px;border-left:2px solid var(--ub-skill-bd-$1,rgba(255,255,255,.28))\"></span><span style=\"display:block;text-align:right;margin-top:9px\"><i class=\"ub-skill-tree\" data-ub-tree=\"1\" data-skill=\"$1\" style=\"display:inline-flex;align-items:center;gap:6px;font-style:normal;font-size:.84em;color:var(--ub-skill-c-$1,#d8dce6);border:1px solid var(--ub-skill-bd-$1,rgba(255,255,255,.28));background:linear-gradient(135deg,var(--ub-skill-ic-$1,rgba(255,255,255,.08)),rgba(255,255,255,.02));padding:3px 13px;border-radius:999px;cursor:pointer;box-shadow:0 0 8px var(--ub-skill-gl-$1,transparent)\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\"><path d=\"M6 5l7 7-7 7M13 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></svg>天赋树</i></span></span></span>",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    },
+    {
+        "id": "4f3168a1-3daa-4d96-ae1f-9e75d187ec0f",
+        "scriptName": "【技能发动】技能新增标签美化正则1",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/\\[技能新增\\][ \\t]*([^|｜\\[\\]\\n]{1,24}?)[ \\t]*[|｜][ \\t]*([^|｜\\[\\]\\n]{1,8}?)[ \\t]*[|｜][ \\t]*([^\\[\\]\\n。！？!?]+[。！？!?]?)/g",
+        "trimStrings": [],
+        "replaceString": "<span class=\"ub-skill-trigger ub-skill-card\" data-skill=\"$1\" data-ub-card=\"1\" data-kind=\"gain\" style=\"display:inline-block;vertical-align:baseline;margin:2px 4px;border-radius:13px;border:1px solid rgba(232,196,96,.24);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.015));box-shadow:0 0 14px rgba(232,196,96,.17),inset 0 1px 0 rgba(255,255,255,.06)\"><span class=\"ub-skill-hd\" data-ub-hd=\"1\" style=\"display:inline-flex;align-items:center;gap:7px;padding:2px 11px 2px 3px;cursor:pointer;user-select:none;-webkit-user-select:none;border-radius:999px\"><i style=\"display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:8px;font-style:normal;background:linear-gradient(135deg,rgba(232,196,96,.16),rgba(255,255,255,.03));border:1px solid rgba(232,196,96,.55);color:rgb(232,196,96);box-shadow:0 0 8px rgba(232,196,96,.17)\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\"><path d=\"M12 2l2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1z\" fill=\"currentColor\"/></svg></i><span style=\"font-size:.82em;color:#9ba2b2;letter-spacing:1px\">技能新增</span><b style=\"color:rgb(232,196,96);text-shadow:0 0 8px rgba(232,196,96,.17)\">$1</b><i data-ub-chev=\"1\" style=\"font-style:normal;color:rgb(232,196,96);opacity:.55;font-size:.78em;transition:transform .2s;transform:rotate(180deg)\">▼</i></span><span class=\"ub-skill-bd\" data-ub-bd=\"1\" style=\"display:block;padding:9px 13px 11px;border-top:1px solid rgba(232,196,96,.24);margin-top:3px\"><span data-ub-type=\"1\" style=\"display:inline-block;font-size:.76em;padding:0 9px;border-radius:999px;border:1px solid rgba(232,196,96,.55);color:rgb(232,196,96);background:rgba(232,196,96,.16);letter-spacing:1px\">$2</span><span style=\"font-size:.76em;color:#828896;margin-left:8px\">习得效果</span><span class=\"ub-skill-eff\" data-ub-eff=\"1\" style=\"display:block;margin-top:7px;color:#c6cbd7;line-height:1.75;padding-left:11px;border-left:2px solid rgba(232,196,96,.55)\">$3</span><span style=\"display:block;text-align:right;margin-top:9px\"><i class=\"ub-skill-add\" data-ub-add=\"1\" data-skill=\"$1\" style=\"display:inline-flex;align-items:center;gap:6px;font-style:normal;font-size:.84em;color:rgb(232,196,96);border:1px dashed rgba(232,196,96,.55);background:linear-gradient(135deg,rgba(232,196,96,.10),rgba(255,255,255,.02));padding:3px 13px;border-radius:999px;cursor:pointer;margin-right:8px\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\"><path d=\"M12 5v14M5 12h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\"/></svg>手动添加</i><i class=\"ub-skill-tree\" data-ub-tree=\"1\" data-skill=\"$1\" style=\"display:inline-flex;align-items:center;gap:6px;font-style:normal;font-size:.84em;color:rgb(232,196,96);border:1px solid rgba(232,196,96,.55);background:linear-gradient(135deg,rgba(232,196,96,.16),rgba(255,255,255,.02));padding:3px 13px;border-radius:999px;cursor:pointer;box-shadow:0 0 8px rgba(232,196,96,.17)\"><svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\"><path d=\"M6 5l7 7-7 7M13 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></svg>天赋树</i></span></span></span>",
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": false
+    }
+]

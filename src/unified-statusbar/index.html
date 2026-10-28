@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <!-- webpack会在打包时自动插入样式和脚本 -->
+</head>
+<body>
+  <!-- 古风 + 瑟瑟风格容器 -->
+  <div id="ac-content"></div>
+
+  <!-- 萦绕风格容器 -->
+  <div class="minimal-container" style="display:none;">
+    <!-- AI 请求提示条（常驻空壳；由 syncAiActivityBar 按活动显隐） -->
+    <div class="ub-ai-bar" data-ub-ai-bar hidden>
+      <span class="ub-ai-dot"></span>
+      <span class="ub-ai-title">AI 请求进行中</span>
+      <span class="ub-ai-req" data-ub-ai-req></span>
+      <span class="ub-ai-count" data-ub-ai-count hidden></span>
+      <span class="ub-ai-actions">
+        <button class="ub-ai-manage" type="button" data-ub-ai-manage hidden>管理</button>
+        <button class="ub-ai-stop" type="button" data-ub-ai-stop>终止</button>
+      </span>
+    </div>
+    <div class="ub-ai-list" data-ub-ai-list hidden></div>
+    <div class="top-actions">
+      <button id="theme-toggle-btn" class="theme-toggle">NIGHT</button>
+      <button class="scene-btn scene-btn-minimal" id="ac-scene-btn" type="button" title="一键切换日常/瑟瑟场景（提示词预设+API）" style="display:none;">场景</button>
+      <button class="settings-btn" id="ac-achievement-btn-minimal" type="button" title="成就簿">🏅</button>
+      <button class="settings-btn" id="ac-database-btn-minimal" type="button" title="数据库">🗄</button>
+      <button class="settings-btn" id="ac-settings-btn-minimal" type="button" title="设置">⚙</button>
+    </div>
+    <div class="sys-header">
+      <span id="sys-char-name" class="sys-char-name char-name-clickable" data-clickable="char-name" style="display:none;"></span>
+      <div id="sys-location" class="sys-location"></div>
+      <div id="sys-status" class="sys-status"></div>
+      <div class="sys-meta">
+        <span id="sys-time" class="en-font"></span>
+      </div>
+    </div>
+    <div class="present-actions">
+      <span class="energy-badge" id="energy-badge">⚡0</span>
+      <!-- 钱包入口（F35）：紧贴能量徽章；内芯与显隐由 renderers/currency-entry.ts 的 syncWalletEntryMinimal 同步 -->
+      <button class="ub-wallet-entry" id="ac-wallet-btn-minimal" type="button" title="货币系统：点击生成币种"></button>
+      <button id="lottery-btn" class="btn-line">商店</button>
+      <button id="item-btn" class="btn-line">物品</button>
+      <button id="mission-btn" class="btn-line">任务</button>
+      <button id="memo-btn" class="btn-line">备忘录</button>
+      <button id="ac-skill-btn" class="btn-line" type="button" title="主角技能与天赋树">技能</button>
+      <button id="ac-wardrobe-btn" class="btn-line" type="button" title="衣柜">衣柜</button>
+      <button id="ac-chronicle-btn" class="btn-line" type="button" title="剧情回顾">回顾</button>
+    </div>
+    <div class="present-header">
+      <div class="section-title">Present</div>
+      <div id="char-selector-buttons" class="char-selector-buttons"></div>
+    </div>
+    <div id="present-chars-container"></div>
+    <div class="play-section" id="play-section">
+      <div class="play-section-head">
+        <div style="display:flex;align-items:center;">
+          <button class="play-collapse-btn" id="play-collapse-btn" type="button" title="折叠">−</button>
+          <div class="section-title" style="margin:0;display:flex;align-items:center;gap:4px;"><span>Play</span><span id="play-help-tip" class="help-tip-btn" style="display:none;" data-tooltip="玩法选择完毕后，正常推进故事即可，正常效果下正文会自然体现你提到的玩法。如果效果不好，请在设置中调整玩法大全插入位置，或尝试正文中适当引导。（Gemini推荐插入角色定义前）效果受模型和预设影响，请勿强求。\n请在结束后使用一键清除功能清除玩法" tabindex="0" onmouseover="window.__ubShowHelpTip(this)" onmouseout="window.__ubHideHelpTip()" onfocus="window.__ubShowHelpTip(this)" onblur="window.__ubHideHelpTip()">?</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <button class="nsfw-guidance-btn" id="nsfw-guidance-btn" type="button">瑟瑟指导</button>
+          <button class="item-use-toggle" id="item-use-toggle" type="button">物品使用 OFF</button>
+          <button class="btn-line" id="play-clear-btn">RESET</button>
+        </div>
+      </div>
+      <div class="play-grid" id="play-grid"></div>
+    </div>
+    <div id="options-bar-container"></div>
+  </div>
+
+  <!-- 角色悬浮提示 -->
+  <div id="char-tooltip" class="char-tooltip"></div>
+
+  <!-- NSFW弹窗已并入角色中枢详情页，容器移除 -->
+
+  <!-- 面板弹窗 -->
+  <div class="panel-overlay" id="panelOverlay"></div>
+
+  <!-- 设置弹窗 -->
+  <div class="settings-overlay" id="settingsOverlay"></div>
+
+  <!-- 全局帮助提示 -->
+  <div class="help-tooltip-global" id="helpTooltipGlobal" style="display:none;"></div>
+</body>
+</html>

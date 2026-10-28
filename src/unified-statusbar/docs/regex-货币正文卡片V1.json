@@ -1,0 +1,104 @@
+[
+  {
+    "id": "b7c1a2d3-0001-4a5b-8c6d-currency00001",
+    "scriptName": "【货币卡片】交易·收入",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[交易\\]\\s*\\+(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<span style=\"display:inline-flex;align-items:center;gap:6px;background:rgba(47,164,126,.06);border:1px solid #bfe0cd;border-left:3px solid #2fa47e;border-radius:8px;padding:2px 10px;margin:0 3px;font-size:.92em;white-space:nowrap;vertical-align:middle;max-width:100%;flex-wrap:wrap\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2e9e52\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.2\"/><circle cx=\"12\" cy=\"12\" r=\"4.1\"/></svg><span>收入</span><b style=\"color:#2e9e52;font-variant-numeric:tabular-nums\">+$1</b><span>$2</span><span style=\"opacity:.6;min-width:0;white-space:normal;overflow-wrap:break-word;word-break:break-word\">$3</span></span>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  },
+  {
+    "id": "b7c1a2d3-0002-4a5b-8c6d-currency00002",
+    "scriptName": "【货币卡片】交易·支出",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[交易\\]\\s*(?!\\+)-?(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<span style=\"display:inline-flex;align-items:center;gap:6px;background:rgba(255,59,48,.05);border:1px solid #f0c4bd;border-left:3px solid #e0483c;border-radius:8px;padding:2px 10px;margin:0 3px;font-size:.92em;white-space:nowrap;vertical-align:middle;max-width:100%;flex-wrap:wrap\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#e0483c\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.2\"/><circle cx=\"12\" cy=\"12\" r=\"4.1\"/></svg><span>支出</span><b style=\"color:#e0483c;font-variant-numeric:tabular-nums\">$1</b><span>$2</span><span style=\"opacity:.6;min-width:0;white-space:normal;overflow-wrap:break-word;word-break:break-word\">$3</span></span>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  },
+  {
+    "id": "b7c1a2d3-0003-4a5b-8c6d-currency00003",
+    "scriptName": "【货币卡片】转账·收到",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[转账\\]\\s*\\+(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<div style=\"display:flex;align-items:center;gap:10px;max-width:440px;margin:9px 0;padding:10px 14px;border-radius:12px;background:#eef7f1;border:1.5px solid #b9dcc6;color:#2e5c43;font-size:.95em;line-height:1.6\"><span style=\"width:36px;height:36px;border-radius:50%;background:rgba(47,164,126,.15);display:inline-flex;align-items:center;justify-content:center;flex:none;font-weight:800\">收</span><span style=\"flex:1;min-width:0\"><b style=\"display:block\">收到转账</b><i style=\"font-style:normal;font-size:.82em;opacity:.8;display:block;overflow-wrap:break-word;word-break:break-word\">$3</i></span><span style=\"font-weight:800;font-variant-numeric:tabular-nums;flex:none\">+$1 $2</span></div>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  },
+  {
+    "id": "b7c1a2d3-0004-4a5b-8c6d-currency00004",
+    "scriptName": "【货币卡片】转账·转出",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[转账\\]\\s*(?!\\+)-?(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<div style=\"display:flex;align-items:center;gap:10px;max-width:440px;margin:9px 0;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,#fa9d3b,#f68b33);color:#fff;box-shadow:0 3px 12px rgba(246,139,51,.3);font-size:.95em;line-height:1.6\"><span style=\"width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;flex:none;font-weight:800\">转</span><span style=\"flex:1;min-width:0\"><b style=\"display:block\">转出转账</b><i style=\"font-style:normal;font-size:.82em;opacity:.9;display:block;overflow-wrap:break-word;word-break:break-word\">$3</i></span><span style=\"font-weight:800;font-variant-numeric:tabular-nums;flex:none\">-$1 $2</span></div>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  },
+  {
+    "id": "b7c1a2d3-0005-4a5b-8c6d-currency00005",
+    "scriptName": "【货币卡片】红包·收到",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[红包\\]\\s*\\+(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<div style=\"display:flex;align-items:center;gap:10px;max-width:440px;margin:9px 0;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,#e05545,#c8402c);color:#ffede6;box-shadow:0 3px 12px rgba(224,85,69,.3);font-size:.95em;line-height:1.6\"><span style=\"font-size:18px;flex:none\">🧧</span><span style=\"flex:1;min-width:0\"><b style=\"display:block\">收到红包</b><i style=\"font-style:normal;font-size:.82em;opacity:.9;display:block;overflow-wrap:break-word;word-break:break-word\">$3 · 待拆开</i></span><span style=\"font-weight:800;color:#ffd86b;font-variant-numeric:tabular-nums;flex:none\">+$1 $2</span><span style=\"width:22px;height:22px;border-radius:50%;background:#ffd86b;color:#a3541f;display:inline-flex;align-items:center;justify-content:center;font-weight:800;flex:none\">開</span></div>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  },
+  {
+    "id": "b7c1a2d3-0006-4a5b-8c6d-currency00006",
+    "scriptName": "【货币卡片】红包·发出",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/\\[红包\\]\\s*(?!\\+)-?(\\d[\\d,]*(?:\\.\\d+)?)\\s*([^\\|\\[\\]\\n。，！？；、]*)\\|([^\\[\\]\\n。，！？；、]*)/g",
+    "trimStrings": [],
+    "replaceString": "<div style=\"display:flex;align-items:center;gap:10px;max-width:440px;margin:9px 0;padding:10px 14px;border-radius:12px;background:#fdeee9;border:1.5px solid #f0bfa9;color:#a04a2e;font-size:.95em;line-height:1.6\"><span style=\"font-size:18px;flex:none\">🧧</span><span style=\"flex:1;min-width:0\"><b style=\"display:block\">发出的红包</b><i style=\"font-style:normal;font-size:.82em;opacity:.8;display:block;overflow-wrap:break-word;word-break:break-word\">$3 · 已塞钱</i></span><span style=\"font-weight:800;font-variant-numeric:tabular-nums;flex:none\">-$1 $2</span></div>",
+    "placement": [
+      2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+  }
+]
